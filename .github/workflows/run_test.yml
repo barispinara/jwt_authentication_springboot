@@ -42,4 +42,5 @@ jobs:
 
       # Run Maven tests
       - name: Run tests
+        working-directory: authentication
         run: mvn clean test
