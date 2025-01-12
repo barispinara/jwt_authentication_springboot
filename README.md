@@ -51,10 +51,10 @@ A robust JWT Authentication system built using Spring Boot (Java 21) and Maven. 
     src/main/resources
     ├── static // CSS file
     ├── templates // HTML pages for testing register and login 
-    ├── application.properties // App configurations
+    └── application.properties // App configurations
 
     src/test/java 
-    ├── com.authentication.authentication // Unit Tests
+    └── com.authentication.authentication // Unit Tests
 
 ---
 
@@ -108,7 +108,9 @@ A robust JWT Authentication system built using Spring Boot (Java 21) and Maven. 
 
 ### H2 Database Console  
 
-The application uses an in-memory H2 database. You can access the H2 console at:  
+The application uses an in-memory H2 database. You can access the H2 console at:
+
+*You can change these properties from `application.properties` if you want*
 
 - **URL**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)  
 - **Default Credentials**:  
@@ -120,9 +122,8 @@ The application uses an in-memory H2 database. You can access the H2 console at:
 
 Modify JWT expiration time and secret in the `application.properties` file:
 
-    
     jwt.secret=your-secret-key
-    jwt.expiration=3600000
+    jwt.expiration=1440000
 
 ## 🧪 Unit Test Coverage
 
