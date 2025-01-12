@@ -9,23 +9,34 @@
 A robust JWT Authentication system built using Spring Boot (Java 21) and Maven. It includes features for **user registration**, **login**, and **authentication** with JWT. This project also contains unit tests for backend functionalities, an embedded H2 database, and simple HTML pages for testing registration and login functionalities.  
 
 ---
-
 ## 📑 Features  
 
-1. **User Registration**:  
-   - Create new accounts with a secure password.  
-2. **Login Functionality**:  
-   - Authenticate users using email and password.  
-3. **JWT Authentication**:  
-   - JSON Web Tokens for secure API access and session management.  
-4. **Unit Tests**:  
-   - Comprehensive backend unit tests using JUnit 5.  
-5. **H2 Database**:  
-   - In-memory database for testing and development purposes.  
-6. **Frontend HTML Pages**:  
-   - Test register and login functionalities via basic HTML pages.  
+- **User Registration**: Create new accounts with a secure password.  
+  - **Username Requirements**: Must be longer than 3 characters.  
+  - **Password Requirements**: Must be longer than 6 characters and contain at least 1 digit.  
+  - **Password Encryption**: User passwords are securely stored as encrypted data in the H2 database.  
+- **Login Functionality**: Authenticate users using email and password.  
+- **JWT Authentication**: JSON Web Tokens for secure API access and session management.  
+- **Exception Handling**:  
+  - Centralized exception handling to provide meaningful error messages to the client, instead of exposing raw exception messages.  
+- **Unit Tests**: Comprehensive backend unit tests using JUnit 5.  
+- **H2 Database**: In-memory database for testing and development purposes.  
+- **Frontend HTML Pages**: Test register and login functionalities via basic HTML pages.  
 
 ---
+## Screenshots  
+
+### Registration Page  
+![Registration Page](images/register_page.png "Registration Page Screenshot")  
+
+### Login Page  
+![Login Page](images/login_page.png "Login Page Screenshot")  
+
+### Home Page
+![Home Page](images/home_page.png "Home Page Screenshot")
+
+### H2 Database (user passwords are stored as encrypted)
+![H2 Database Page](images/database_page.png "H2 Database Page Screenshot")
 
 ## 🚀 Technology Stack  
 
@@ -111,6 +122,8 @@ A robust JWT Authentication system built using Spring Boot (Java 21) and Maven. 
 The application uses an in-memory H2 database. You can access the H2 console at:
 
 *You can change these properties from `application.properties` if you want*
+
+> `Note:`  H2 Database is set to **create-drop** property in *application.properties* which means that, database clear itself every run. If you are not happy with this configuration you should change it from *application.properties*
 
 - **URL**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)  
 - **Default Credentials**:  
