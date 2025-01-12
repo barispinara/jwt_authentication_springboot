@@ -123,7 +123,7 @@ The application uses an in-memory H2 database. You can access the H2 console at:
 
 *You can change these properties from `application.properties` if you want*
 
-> `Note:`  H2 Database is set to **create-drop** property in *application.properties* which means that, database clear itself every run. If you are not happy with this configuration you should change it from *application.properties*
+> `Note:`  H2 Database is set to **create-drop** property in *application.properties* which means that, database clears itself in every run. This configuration can be changed from *application.properties*
 
 - **URL**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)  
 - **Default Credentials**:  
